@@ -11,6 +11,7 @@
         "mpgs",
         "webhooks"
     ],
+    "version": "3.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
