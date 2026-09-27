@@ -1,0 +1,64 @@
+{
+    "name": "ahmad-chebbo/laravel-areeba-payment",
+    "description": "Laravel package for the Areeba (Mastercard Gateway) hosted checkout, refunds, card tokens and webhooks",
+    "keywords": [
+        "areeba",
+        "laravel",
+        "payment",
+        "gateway",
+        "checkout",
+        "mastercard gateway",
+        "mpgs",
+        "webhooks"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ahmad Shebbo",
+            "email": "ahmad.m.shebbo@gmail.com",
+            "homepage": "https://dotzonegrp.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/cache": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/routing": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/view": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AhmadChebbo\\AreebaPayment\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AhmadChebbo\\AreebaPayment\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AhmadChebbo\\AreebaPayment\\AreebaServiceProvider"
+            ],
+            "aliases": {
+                "Areeba": "AhmadChebbo\\AreebaPayment\\Facades\\Areeba"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
